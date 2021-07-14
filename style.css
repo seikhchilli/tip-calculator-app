@@ -202,8 +202,10 @@ p{
 
     .box{
         margin-top: 2em;
+        margin-left: 0;
+        margin-right: 0;
         width: auto;
-        height: auto;
+        height: 100%;
         font-size: 12px;
         font-weight: 700;
         border-bottom-left-radius: 0;
@@ -228,7 +230,7 @@ p{
     }
 
     .tip-options{
-        grid-template-columns: 47% 47%;
+        grid-template-columns: 47.5% 47.5%;
         row-gap: 1em;
         column-gap: 1em;
     }
