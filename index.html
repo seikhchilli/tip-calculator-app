@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   
   <link rel="stylesheet" href="./style.css">
    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
@@ -23,9 +24,8 @@
       <div class="input-area">
         <div class="input-wrapper">
           <div class="bill">
-            <label for="bill">Bill</label><br>
-            <input type="number" id="bill" value="0" onfocus="value = '';" oninput=" this.style.border = 'solid 1px hsl(172, 67%, 45%)'; getBillValue(); tipUpdate();"  required>
-    
+            <label class = "bill-label" for="bill"><span>Bill</span></label>
+            <input type="number" id="bill" value="0" onfocus="value = '';" oninput="this.style.border = 'solid 1px hsl(172, 67%, 45%)';getBillValue(); tipUpdate();"  required>
           </div>
           <div class = "tip-percent">
             <label for="tip-percent">Select Tip %</label><br>
@@ -35,12 +35,12 @@
               <input type="button" class="tip-percentage" id="tip-percent" value="15%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
               <input type="button" class="tip-percentage" id="tip-percent" value="25%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
               <input type="button" class="tip-percentage" id="tip-percent" value="50%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
-              <input type="button" class="tip-percentage" onclick="custom();" id="custom" value="custom" style="color: hsl(186, 14%, 43%);background-color: hsl(185, 61%, 92%);">
+              <input type="button" class="tip-percentage" onclick="custom(); value='';" id="custom" value="custom" style="color: hsl(186, 14%, 43%);background-color: hsl(185, 61%, 92%);" oninput="this.style.border = 'solid 1px hsl(172, 67%, 45%)';getCustom();tipUpdate()">
             </div>
   
           </div>
           <div class = "people-num">
-            <label for="people-num">Number of People</label><br>
+            <label class ="people-label" for="people-num"><span>Number of People</span><span id="people-error"></span></label>
             <input type="number" id = "people-num" value="0" min="1" max = "100" onfocus="value = '';" oninput="this.style.border = 'solid 1px hsl(172, 67%, 45%)'; getPeopleNum(); tipUpdate(); " required>
     
           </div>
@@ -75,7 +75,7 @@
     
           </div>
           <div class="reset">
-            <button class="reset-btn" id="reset">RESET</button>
+            <button class="reset-btn" id="reset" onclick="reset()">RESET</button>
             
           </div>
 

@@ -101,7 +101,18 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
 }
 .tip-percentage:hover{
+    background-color:   hsl(185, 41%, 84%) ;
+    color: hsl(183, 100%, 15%) ;
+}
+
+.active{
     background-color: hsl(172, 67%, 45%) ;
+    color: hsl(183, 100%, 15%) ;
+}
+
+.active:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%) ;
 }
 
 #people-num{
@@ -122,6 +133,14 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
 
     
+}
+.people-label{
+    display: flex;
+    justify-content: space-between;
+}
+
+#people-error{
+    color: red;
 }
 
 .output-area{
@@ -185,8 +204,12 @@ p{
     padding: 0.25em 0.25em 0.25em 0.25em;
 }
 
-.reset-btn:hover{
+button:hover{
     background-color: hsl(185, 41%, 84%);
+}
+
+button:disabled, button:disabled:hover{
+    background-color: hsl(186, 14%, 43%);
 }
 
 
@@ -248,3 +271,6 @@ p{
 
 
 }
+
+
+
