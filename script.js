@@ -59,7 +59,6 @@ function tipUpdate(){
 }
 
 function reset(){
-    btn.disable = true;
     $('.tip-percentage').removeClass('active');
     btn.style = "background-color: hsl(172, 67%, 45%);";
     document.getElementById("people-num").value = 0;
