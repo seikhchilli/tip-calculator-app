@@ -22,9 +22,11 @@ body{
     border-radius: 1.5em;
     margin-right: auto;
     margin-left: auto;
-    width: 49vw;
-    max-height: 49vh;
+    width: 48%;
+    height: 54%;
     font-size: 14px;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
 
 }
 
@@ -62,10 +64,10 @@ input::-webkit-inner-spin-button {
     background-image: url("images/icon-dollar.svg");
     background-repeat: no-repeat;
     background-position: left;
-    background-color: hsl(185, 41%, 84%) ;
+    background-color: hsl(185, 61%, 92%) ;
     width: 100%;
     margin-top: 0.2em;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 4px;
     border: transparent;
 
@@ -73,6 +75,8 @@ input::-webkit-inner-spin-button {
     padding-bottom: 0.15em;
     text-align: right;
     outline: none;
+    color: hsl(183, 100%, 15%) ;
+    font-weight: 700;
 }
 
 .tip-options{
@@ -88,18 +92,21 @@ input::-webkit-inner-spin-button {
 }
 
 #tip-percent{
-    font-size:  20px;
+    font-size:  24px;
     padding: 0.15em 0.15em 0.15em 0.15em;
     border: transparent;
     border-radius: 4px;
     background-color:   hsl(183, 100%, 15%) ;
     color: white;
-    font-weight: 400;
+    font-weight: 700;
+}
+#tip-percent:hover{
+    background-color: hsl(172, 67%, 45%) ;
 }
 
 #people-num{
     margin-top: 0.2em;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 4px;
     border: none;
     background-color: hsl(185, 41%, 84%);
@@ -111,6 +118,8 @@ input::-webkit-inner-spin-button {
     padding-bottom: 0.15em;
     outline: none;
     text-align: right;
+    color: hsl(183, 100%, 15%) ;
+    font-weight: 700;
 
     
 }
@@ -124,7 +133,7 @@ input::-webkit-inner-spin-button {
 
 .output-wrapper{
     
-    margin: 2em 2em 2em 2em;
+    margin: 2.25em 2em 1em 2em;
 
 }
 .output-display{
@@ -145,7 +154,7 @@ p{
 
 .tip-value, .total-value{
     color: hsl(172, 67%, 45%);
-    font-size: 30px;
+    font-size: 32px;
 }
 
 .tip-amount{
@@ -162,16 +171,77 @@ p{
 }
 
 .reset{
-    margin-top: 9em;
+    margin-top: 10em;
 }
 
-#reset{
+.reset-btn{
     width: 100%;
     border: none;
     border-radius: 4px;
     background-color: hsl(172, 67%, 45%);
-    padding: 0.45em;
-    padding-bottom: 0.45em;
     color: hsl(183, 100%, 15%);
     font-weight: 700;
+    font-size: 20px;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+}
+
+.reset-btn:hover{
+    background-color: hsl(185, 41%, 84%);
+}
+
+
+@media only screen and (max-width: 600px) {
+    body{
+        height: auto;
+    }
+    .heading{
+        
+        margin-top: 1.25em;
+        padding: 0;
+    }
+
+    .box{
+        margin-top: 2em;
+        width: auto;
+        height: auto;
+        font-size: 12px;
+        font-weight: 700;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .box-wrapper{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        grid-template-columns: auto;
+        row-gap: 1.5em;
+    }
+    .output-wrapper{
+        margin: 1.5em 1.25em 1em 1.25em;
+    }
+    .reset{
+        margin-top: 1.25em;
+        size: 100%;
+    }
+    #reset{
+        font-size: 16px;
+    
+    }
+
+    .tip-options{
+        grid-template-columns: 47% 47%;
+        row-gap: 1em;
+        column-gap: 1em;
+    }
+
+    #tip-percent, #people-num, #bill{
+        font-size: 20px;
+    }
+    .tip-value, .total-value{
+        font-size: 28px;
+    }
+    .output-display{
+        row-gap: 1.5em;
+    }
+
+
 }
