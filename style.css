@@ -91,7 +91,7 @@ input::-webkit-inner-spin-button {
     
 }
 
-#tip-percent{
+.tip-percentage{
     font-size:  24px;
     padding: 0.15em 0.15em 0.15em 0.15em;
     border: transparent;
@@ -100,7 +100,7 @@ input::-webkit-inner-spin-button {
     color: white;
     font-weight: 700;
 }
-#tip-percent:hover{
+.tip-percentage:hover{
     background-color: hsl(172, 67%, 45%) ;
 }
 
@@ -234,7 +234,7 @@ p{
 
     }
 
-    #tip-percent, #people-num, #bill{
+    #tip-percent, #people-num, #bill, #custom{
         font-size: 20px;
         padding-top: 0.5em;
         padding-bottom: 0.5em;

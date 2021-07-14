@@ -24,24 +24,24 @@
         <div class="input-wrapper">
           <div class="bill">
             <label for="bill">Bill</label><br>
-            <input type="number" id="bill" onfocus="this.value=''; this.style.border = 'solid 1px hsl(172, 67%, 45%)';" value="0" required>
+            <input type="number" id="bill" value="0" onfocus="value = '';" oninput=" this.style.border = 'solid 1px hsl(172, 67%, 45%)'; getBillValue(); tipUpdate();"  required>
     
           </div>
           <div class = "tip-percent">
             <label for="tip-percent">Select Tip %</label><br>
             <div class="tip-options">
-              <input type="button" id="tip-percent" value="5%">
-              <input type="button" id="tip-percent" value="10%">
-              <input type="button" id="tip-percent" value="15%">
-              <input type="button" id="tip-percent" value="25%">
-              <input type="button" id="tip-percent" value="50%">
-              <input type="button" id="tip-percent" value="custom" style="color: hsl(186, 14%, 43%);background-color: hsl(185, 61%, 92%);">
+              <input type="button" class="tip-percentage" id="tip-percent" value="5%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
+              <input type="button" class="tip-percentage" id="tip-percent" value="10%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
+              <input type="button" class="tip-percentage" id="tip-percent" value="15%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
+              <input type="button" class="tip-percentage" id="tip-percent" value="25%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
+              <input type="button" class="tip-percentage" id="tip-percent" value="50%" onclick="tipPercent = this.value; getTipPercent(); tipUpdate();">
+              <input type="button" class="tip-percentage" onclick="custom();" id="custom" value="custom" style="color: hsl(186, 14%, 43%);background-color: hsl(185, 61%, 92%);">
             </div>
   
           </div>
           <div class = "people-num">
             <label for="people-num">Number of People</label><br>
-            <input type="number" id = "people-num" value="0" min="1" max = "100" onfocus="this.value=''; this.style.border = 'solid 1px hsl(172, 67%, 45%)';" required>
+            <input type="number" id = "people-num" value="0" min="1" max = "100" onfocus="value = '';" oninput="this.style.border = 'solid 1px hsl(172, 67%, 45%)'; getPeopleNum(); tipUpdate(); " required>
     
           </div>
         </div>
@@ -96,3 +96,4 @@
   </div>-->
 </body>
 </html>
+<script src="script.js"></script>
