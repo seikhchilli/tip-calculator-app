@@ -192,7 +192,7 @@ p{
 
 @media only screen and (max-width: 600px) {
     body{
-        height: auto;
+        height: 100vh;
     }
     .heading{
         
@@ -206,7 +206,7 @@ p{
         margin-right: 0;
         width: 100%;
         height: 100%;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
